@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Actor   </title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+    <section>
+        <h1>WHAT IS NAME SAY </h1>
+        <div class="centerDiv">
+            <div class="details">
+                <label>ENTER YOUR NAME</label></div><br>
+                <input type="text" name="" id="nameid" >
+
+                
+            </div>
+            <div class="imgdiv">
+                <img src="eximg.jpg" alt="main" width="200" height="200" class="imgchange">
+            </div>
+        <button>Click Me</button>
+        </div>
+    </section>
+    
+
+    <script>
+        
+        $(document).ready(function () {
+            $('button').click(function () {
+                let name=$('#nameid').val();
+                // alert(name);
+                $('.imgchange').attr('src',`https://joeschmoe.io/api/v1/male${name}`);//it's only for male icon for female just write female place of male 
+                let b=$('.imgchange');
+                console.log(b);
+            });
+        });
+    </script>
+</body>
+</html>
